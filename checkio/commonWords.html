@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  function commonWords(first,second) {
+    var three=first+"," + second;
+    var data = three.split(",");
+    var commonWordmass=[];
+    for(var i=0; i < data.length; i++){
+      var k=0;
+        for(var j=0;j < data.length; j++){
+          if(data[i]==data[j]){
+            k++
+          }
+          if (k>1) {
+            if(!commonWordmass.includes(data[i])){
+              commonWordmass.push(data[i]);
+              k=0;
+            }
+          }
+          }
+      }
+      commonWordmass.sort();
+      var commonWord=commonWordmass.join(",");
+      return commonWord;
+}
+console.log(commonWords("one,two,three", "four,five,one,two,six,three"));
+  </script>
+</body>
+</html>

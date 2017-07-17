@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  function countNeighbours(data, row, col) {
+    var k=0
+    for(var x=row-1; x<=row+1; x++){
+      for (var y = col-1; y<=col+1; y++) {
+        if(data[x] && data[x][y]){
+          if(x==row && y==col){
+            y++
+          }
+            if(data[x][y]==1){
+              k++
+            }
+
+    }
+  }
+}
+  return k
+}
+console.log(
+countNeighbours([[1,0,1,0,1],[0,1,0,1,0],[1,0,1,0,1],[0,1,0,1,0],[1,0,1,0,1],[0,1,0,1,0]],5,4))
+  </script>
+</body>
+</html>

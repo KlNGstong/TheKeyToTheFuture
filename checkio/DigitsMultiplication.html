@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  function digitsMultip(str) {
+    var Stringe=String(str)
+    var data=Stringe.split("");
+    var Multip=1;
+    for(var i=0;i<data.length;i++){
+      if(data[i]>0){
+        Multip=Multip*data[i];
+        }
+      }
+    return Multip;
+  }
+
+console.log(digitsMultip(123405));
+
+  </script>
+</body>
+</html>

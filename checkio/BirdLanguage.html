@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function translate(str) {
+      var data=str.split("");
+      var Consonant=["b","c","d","f","j","k","l","m","n","p","q","r","s","t","v","w","x","z","h","g"];
+      var Vowel=["a","e","i","o","u","","y"];
+      var world=[];
+
+      for (var i = 0; i < data.length; i++) {
+          if(Consonant.includes(data[i])){
+            if(data[i]==" "){
+              world.push(data[i])
+            }else{
+              world.push(data[i])
+              i++
+            }
+        }else if(Vowel.includes(data[i])){
+          if(data[i]==" "){
+            world.push(data[i])
+          }else{
+            world.push(data[i])
+            i=i+2
+          }
+        }
+        if(data[i]==" "){
+            world.push(data[i])
+        }
+    }
+    return world.join('')
+  }
+          console.log(translate("aaabucidyeeefigihoiiijukulemonoooopyqorysotauuuviwuxayyyzu ziyyyxuwivouuutesiriqopaooonimelykijaiiihigefaeeedacybuaaa"));
+  </script>
+</body>
+</html>

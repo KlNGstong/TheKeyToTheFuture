@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function mostNumbers(){
+      var data = Array.prototype.slice.call(arguments);
+      var mostNumber=0;
+      var max = data[0];
+      var min = data[0];
+      for(var i = 0; i<=data.length-1; i++){
+
+        if(max<data[i]){
+          max = data[i];
+        };
+        if(min>data[i]){
+          min = data[i];
+        };
+
+
+      }
+      if(data.length==0){
+        return mostNumber;
+      }else
+        mostNumber=max-min;
+            return mostNumber;
+    }
+    console.log(mostNumbers(1, 2, 3));
+  </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function xoReferee(str) {
+      var data=str[0]+str[1]+str[2];
+      var mass=data.split("");
+      var Method1=mass[0]+mass[3]+mass[6];
+      var Method2=mass[0]+mass[4]+mass[8];
+      var Method3=mass[2]+mass[4]+mass[6];
+      var Method4=mass[0]+mass[1]+mass[2];
+      var Method5=mass[3]+mass[4]+mass[5];
+      var Method6=mass[6]+mass[7]+mass[8];
+      var Method7=mass[1]+mass[4]+mass[7];
+      var Method8=mass[2]+mass[5]+mass[8];
+      var mas=[Method1,Method2,Method3,Method4,Method5,Method6,Method7,Method8]
+      var x="XXX";
+      var o="OOO";
+      for (var i = 0; i <mass.length; i++) {
+        if(x==Method1 || x==Method2 || x==Method3 || x==Method4 || x==Method5 || x==Method6 || x==Method7 || x==Method8){
+          return "X";
+        }
+        if(o==Method1 || o==Method2 || o==Method3 || o==Method4 || o==Method5 || o==Method6 || o==Method7 || o==Method8){
+          return "O";
+        }
+      }
+      return "D";
+      console.log(mas);
+    }
+  console.log(  xoReferee([
+  "OOX","XXX","OXX"]));
+  </script>
+</body>
+</html>

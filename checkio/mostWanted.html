@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  function mostWanted(str) {
+
+    var data=str.toLowerCase().split("")
+    var obj={}
+    for(var i=0; i < data.length; i++){
+      var k=0;
+        for(var j=0;j < data.length; j++){
+          if(data[i]>="A" && data[i] <= "z"){
+
+            if(data[i]==data[j]){
+                k++
+              obj[data[i]]=k;
+            }
+
+          }
+        }
+    }
+    var numberBig=Object.keys(obj);
+    numberBig.sort()
+    var res="";
+    var max=0;
+    for (var i = 0; i < numberBig.length; i++) {
+      if(max<obj[numberBig[i]]){
+        max=obj[numberBig[i]];
+        res=numberBig[i];
+      }
+    }
+    return res;
+  }
+
+
+
+console.log(mostWanted("One"));
+  </script>
+</body>
+</html>

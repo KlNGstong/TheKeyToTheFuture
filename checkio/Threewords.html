@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  function threeWords(str) {
+    var data=str.split(" ");
+    var k=0;
+    for(var i=0;i < data.length;i++){
+      var word=data[i].split("");
+      if(word[0] >="A" && word[0] <= "Z" || word[0] >="a" && word[0] <= "z"){
+        k++
+      }else{
+        k=0;
+      }
+      if(k>=3){
+        return true;
+      }
+    }
+        return false;
+  }
+  console.log(threeWords("one two 3 four five six 7 eight 9 ten eleven 12"));
+  </script>
+</body>
+</html>

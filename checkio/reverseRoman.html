@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function reverseRoman(str) {
+      var obj={
+        I:1,
+        IV:4,
+        V:5,
+        IX:9,
+        X:10,
+        XL:40,
+        L:50,
+        XC:90,
+        C:100,
+        CD:400,
+        D:500,
+        CM:900,
+        M:1000
+      }
+      var reverseRomans=Object.keys(obj);
+      var data=str.split("")
+      var number=0;
+      for(var i=data.length-1;i>=0;i--){
+        if(reverseRomans.includes(data[i-1]+data[i])){
+          number=number+obj[data[i-1]+data[i]]
+          i--
+        }else if(reverseRomans.includes(data[i])){
+          number=number+obj[data[i]]
+        }
+      }
+      return number;
+    }
+    reverseRoman('IX')
+  </script>
+</body>
+</html>

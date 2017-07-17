@@ -1,0 +1,38 @@
+
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script >
+    function median(data) {
+      var temp;
+      var len=data.length;
+      for (var i = 0; i < len - 1; i++) {
+       for (var j = 0; j < len - i - 1; j++) {
+
+           if (data[j] > data[j + 1]) {
+               temp = data[j];
+               data[j] = data[j + 1];
+               data[j + 1] = temp;
+          }
+       }
+     }
+      var mediana;
+
+         if(len%2==0){
+
+           mediana=(data[len/2]+data[len/2-1])/2;
+
+         }else{
+
+          mediana=data[(len-1)/2];
+        };
+      return mediana;
+    };
+  console.log("mediana",median([3, 6, 20, 99, 10, 15]));
+  median([3, 6, 20, 99, 10, 15]);
+
+
+  </script>
+</body>
+</html>
