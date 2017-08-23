@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function hammingDistance(n, m) {
+      var data=n.toString(2)
+      var numb=m.toString(2)
+      var massN=data.split("")
+      var massM=numb.split("")
+      var number=0
+      for (var i = massN.length; i > 0; i--) {
+        if(massM[i]==undefined){
+          for(var j=1; i < massN.length; i++){
+            if(massN[i]==1){
+              number=number+1
+            }
+          }
+        }
+        if(massN[i]>massM[i]){
+          number=number+1
+          }
+
+
+}
+      return number
+    }
+    hammingDistance(1, 2)
+  </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  function createIntervals(numb) {
+
+
+      if(numb.length==0){
+          return []
+          }
+    var data=numb.sort(function(a, b) {
+return a - b;
+});
+    var mass=[]
+    var number=[];
+    var k=0;
+    for(var i=0; i<data.length; i++){
+      if(0==k){
+        if(i==0){
+          mass.push(data[i])
+        }else{
+          if((data[i]-data[i-1]) == 1){
+            mass.push(data[i])
+          }else{
+              if(mass==[]){
+              }else{
+                let min = mass[0];
+                let max = mass[0];
+                for (let j = 1; j < mass.length; ++j) {
+                  if (mass[j] > max) { max = mass[j] };
+                  if (mass[j] < min) { min = mass[j] };
+                }
+                number.push([min,max])
+                var mass=[]
+                k++
+              }
+            }
+        }
+      }else{
+        mass.push(data[i-1])
+        k--
+        i--
+      }
+
+    }
+
+        if(mass.length == 0){
+        }else{
+          let min = mass[0];
+          let max = mass[0];
+          for (let j = 1; j < mass.length; ++j) {
+            if (mass[j] > max) max = mass[j];
+            if (mass[j] < min) min = mass[j];
+          }
+          number.push([min,max])
+          var mass=[]
+          k++
+        }
+        if(numb.length== 1){
+
+        }
+        else  if(data[data.length-1]-data[data.length-2] == 1){
+        }else{
+        number.push([data[data.length-1],data[data.length-1]])
+
+}
+  return number;
+}
+console.log(createIntervals([1]));
+
+  </script>
+</body>
+</html>

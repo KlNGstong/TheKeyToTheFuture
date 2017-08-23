@@ -8,9 +8,33 @@
 </head>
 <body>
   <script>
-var mass=["о","e","n"]
-mass.sort()
-console.log(mass);
+var arr =[0,4,65,5,6]
+for(var i = 1; i < arr.length; i++)  //внимание на начальный номер
+                    //связано это с тем, что сравниваем с "предыдущим" пузырьком
+                    //но индекса "-1" в массиве нет
+{
+    for(var j = i; j >= 1; j--)
+    {
+        //меняем элементы местами
+        var a = arr[j];
+        arr[j] = arr[j-1];
+        arr[j-1] = a;
+    }
+}
+if(number==[]){
+  min = mass[0];
+  max = min;
+  for (j = 1; j < mass.length; ++j) {
+    if (mass[j] > max) max = mass[j];
+    if (mass[j] < min) min = mass[j];
+  }
+  number.push("["+min+","+max+"]")
+  var mass=[]
+}
+if(data[data.length-1]-data[data.length-2] == 1){
+}else{
+number.push("["+data[data.length-1]+","+data[data.length-1
+}
      </script>
 </body>
 </html>
