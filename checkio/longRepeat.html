@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function longRepeat(str) {
+      var data=str.split("")
+      var obj={};
+
+      for(var i=0;i<data.length;i++){
+        var k=0;
+            while(data[i]==data[i+1]){
+              k++
+              i++
+            }
+            k++
+            obj[data[i]] = k;
+          }
+      var numberBig=Object.keys(obj);
+      numberBig.sort()
+      var res="";
+      var max=0;
+      for (var i = 0; i < numberBig.length; i++) {
+        if(max<obj[numberBig[i]]){
+          max=obj[numberBig[i]];
+          res=numberBig[i];
+        }
+      }
+      return max;
+    }
+
+    console.log(longRepeat('abababaab'));
+  </script>
+</body>
+</html>

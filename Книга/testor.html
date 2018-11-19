@@ -7,9 +7,12 @@
   <title>Document</title>
 </head>
 <body>
-
-<script>
-
-</script>
+  <script>
+  function test(t){
+    console.log(t)
+    test(t+1)
+  }
+  console.log(test(0));
+  </script>
 </body>
 </html>

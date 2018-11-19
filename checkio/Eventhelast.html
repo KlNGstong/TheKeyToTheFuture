@@ -9,21 +9,31 @@
 <body>
   <script>
   function evenLast(mass) {
-    var sum=0;
-    for(var i=0;i <= mass.length-1;++i){
-      if(i%2==0){
-        sum= sum + mass[i];
+  	var sum=0;
+        mass.map(function(currentValue,index){
+           if(currentValue%2==0 || currentValue==0){
+              sum= sum+currentValue
+           }
+
+        })
+
+    //var sum=0;
+      //for(var i=0;i <= mass.length-1;i++){
+       // var got=i;
+        //if(got%2==0 || got==0){
+          //sum= sum+mass[i];
+        //}
+
+      //}
+      if(mass==0){
+        sum=0;
+      }else{
+      sum=sum*mass[mass.length-1];
       }
+
+      return sum;
     }
-    if (mass.length==0) {
-      return sum
-    }
-    return sum*mass[mass.length-1];
-  }
-
-console.log(evenLast([0, 1, 2, 3, 4, 5]));
-
-
+  console.log(evenLast([1, 3, 5]))
   </script>
 </body>
 </html>

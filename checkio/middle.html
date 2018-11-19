@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  function middle(text) {
+    var data = text.split("")
+    if(data.length%2 == 0){
+      return data[data.length/2 - 1] + data[data.length/2 ]
+    }
+      return data[data.length/2 - 0.5]
+  }
+console.log(middle('symbols are: !@#$%^&*()='));//m
+  </script>
+</body>
+</html>

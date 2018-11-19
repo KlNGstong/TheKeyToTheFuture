@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  function countInversion(data){
+  var inversion = 0;
+    data.forEach (function(nothing,i) {
+      data.forEach (function(nothing,j) {
+       if(i > j){
+         return
+       }
+        if(data[i] > data[j]){
+          inversion++
+        }
+      })
+    })
+    return inversion;
+  }
+  console.log(countInversion([1, 2, 5, 3, 4, 7, 6]));
+  </script>
+</body>
+</html>
