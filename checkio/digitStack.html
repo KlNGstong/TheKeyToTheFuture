@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  function digitStack(data){
+      var stack = [] ;
+      for (var i = 0; i < data.length; i++) {
+        var cmd = data[i].split(" ")
+        switch (cmd[0]) {
+          case "PUSH":
+            stack.push(cmd[1])
+            break;
+          case "POP":
+              stack = stack.slice(1,stack.length)
+            break;
+        }
+      }
+      return stack;
+   }
+console.log(digitStack(["PUSH A", "POP", "POP", "PUSH Z", "PUSH D", "PUSH O", "POP", "PUSH T"]));
+  </script>
+</body>
+</html>

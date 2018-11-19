@@ -7,9 +7,16 @@
   <title>Document</title>
 </head>
 <body>
-
-<script>
-
-</script>
+  <script>
+  function secondIndex(text, symbol) {
+    var data=text.indexOf(symbol)
+    var second=text.indexOf(symbol,data+1);
+    if(second > -1){
+      return second
+    }
+    return undefined
+  }
+  console.log(secondIndex("hi", " "));
+  </script>
 </body>
 </html>

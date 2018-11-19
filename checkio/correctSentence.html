@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  function correctSentence(text) {
+
+if(text.includes(".")){
+  var myWord=text.charAt(0).toUpperCase()+text.slice(1);
+}else{
+  var myWord=text.charAt(0).toUpperCase()+text.slice(1)+".";
+}
+
+      return myWord;
+  }
+console.log(correctSentence("hi.") )
+  </script>
+</body>
+</html>

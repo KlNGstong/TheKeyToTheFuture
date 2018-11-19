@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  function toCamelCase(name) {
+    var data = name.split('_')
+    var name = "";
+    for (var i = 0; i < data.length; i++) {
+      name += data[i][0].toUpperCase() + data[i].slice(1,data[i].length)
+    }
+    return name;
+  }
+  console.log(toCamelCase("my_function_name"));
+  </script>
+</body>
+</html>

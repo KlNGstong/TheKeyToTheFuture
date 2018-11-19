@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  var graph = {
+    "My":["Tom","Ronald","Jarry","Alice","Sonia","Zhora"],
+    "Tom":["Ronald","Jarry","Thom","Bob"],
+    "Ronald":["Peggy","Thom","Tom"],
+    "Jarry":["Claire","Jonny"],
+    "Alice":["Thom","Sonia","Tom"],
+    "Sonia":["Alice","Thom","Jarry"]
+  }
+  var searched = []
+  var search_queue = Object.keys(graph)
+  function search(name){
+    while(!search_queue == 0){
+      var person = search_queue.pop()
+      if(!searched.includes(person)) {
+        if(person == name){
+          console.log(person + " is a mango seller");
+          return true
+        } else{
+           searched.push(person)
+            search_queue = [...search_queue,...(graph[person] || [])]
+          }
+      }
+    }
+    return false
+ }
+  console.log(search("Zhora"));
+  </script>
+</body>
+</html>

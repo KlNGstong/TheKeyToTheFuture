@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  function nonRepeat(line) {
+    var data = line.split("")
+    var controle = true
+    var t = 0
+    for (var i = 0; i < data.length; i++) {
+      for (var j = 0; j < data.length; j++) {
+        if(controle == true){
+          obj[data.indexOf(str[j])] = data.indexOf(str[j]).length
+          controle = false
+        } else {
+          obj[data.indexOf(str[j+1])] = data.indexOf(str[j]).length
+        }
+      }
+    }
+  return obj[max]
+}
+console.log(nonRepeat('abcbde'));
+  </script>
+</body>
+</html>

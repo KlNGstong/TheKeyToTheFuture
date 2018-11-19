@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+  function quicksort(data) {
+    var less = []
+    var greater = []
+    var pivot = data[Math.round(data.length / 2)-1]
+    if(data.length < 2){
+      return data
+    } else {
+      for (var i = 0; i < data.length; i++) {
+        if(data[i] < pivot){
+          less.push(data[i])
+        } else if(data[i] > pivot) {
+          greater.push(data[i])
+        }
+      }
+   }
+      return [...quicksort(less) , pivot , ...quicksort(greater)]
+  }
+  console.log(quicksort([1,2,6,5,9,3,0]));
+  </script>
+</body>
+</html>

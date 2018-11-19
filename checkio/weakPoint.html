@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  function weakPoint(data){
+    var sumRow = [];
+    var sumColum = [];
+    for (var i = 0; i < data.length; i++) {
+      sumRow.push(0)
+      sumColum.push(0)
+    }
+    for (var i = 0; i < data.length; i++) {
+      for (var j = 0; j < data.length; j++) {
+        sumRow[i] += data[i][j]
+        sumColum[j] += data[i][j]
+      }
+    }
+      return [sumRow.indexOf(Math.min(...sumRow)),sumColum.indexOf(Math.min(...sumColum))]
+  }
+  console.log(weakPoint([[7, 2, 7, 2, 8],
+           [2, 9, 4, 1, 7],
+           [3, 8, 6, 2, 4],
+           [2, 5, 2, 9, 1],
+           [6, 6, 5, 4, 5]]));
+  </script>
+</body>
+</html>
