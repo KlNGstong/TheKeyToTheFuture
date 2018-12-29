@@ -1,4 +1,4 @@
-const data = "Hello"
+const data = "Hesado"
 const allWords = ["Heasdo","Habitually","Hack","Hacking","Hello","Hail","Hail","Hair","Half","Hall","Halo",
                 "Hand","Handicap","Handkerchief","Hands","Handsome","Handwriting","Hang","Happened","Happily",]
 const obj = {}
@@ -11,6 +11,8 @@ allWords.forEach(function(word){
 })
 let maxKey = Object.keys(obj)[0]
 Object.keys(obj).forEach(function(key,i){
-    obj[maxKey] < obj[key] ? maxKey = key : undefined
+    if(obj[maxKey] < obj[key]){
+        maxKey = key
+    }
 })
 console.log(maxKey);
