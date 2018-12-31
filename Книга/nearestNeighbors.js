@@ -26,8 +26,7 @@ const justin = {
 }
 let points = {}
 let formula = 0
-let keysSigns = Object.keys(signsOf)
-keysSigns.forEach(function(names){
+Object.keys(signsOf).forEach(function(names){
     Object.keys(names).forEach(function(marks,j){
         formula = formula + Math.pow(+justin[Object.keys(justin)[j]] - +marks,2)
     })  
