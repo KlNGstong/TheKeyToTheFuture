@@ -1,8 +1,7 @@
 const ALPHABET = "abcdefghijklmnopqrstuvwxyz".split("");
 function checkPangram(text){
-    let contrl = []
-    const data = text.replace(/[^a-zA-Z]/g, '').toLowerCase().split("")
-    data.forEach(function(letter){
+    const contrl = []
+    text.replace(/[^a-zA-Z]/g, '').toLowerCase().split("").forEach((letter)=>{
         if(!contrl.includes(letter)){
             contrl.push(letter)
         }
