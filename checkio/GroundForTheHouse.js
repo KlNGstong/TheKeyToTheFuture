@@ -7,7 +7,10 @@ function house(plan) {
     }
     data.forEach((und,i) =>{
         data[i].split("").forEach((und,j) =>{
-            data[i][j] == "#" ? (InWide.push(j+1) , InHeight.push(i)) : undefined 
+            if(data[i][j] == "#"){
+                InWide.push(j+1) 
+                InHeight.push(i)
+            }
         })
     })
     let max = 0
