@@ -1,16 +1,15 @@
 function house(plan) {
     const data = plan.split("\n")
-    let InWide = []
-    let InHeight = [];
+    const InWide = []
+    const InHeight = [];
     data[0] == "" ? data.shift() : undefined    
-    for (let i = 0; i < data.length; i++) {
-        for (let j = data[i].length-1; j >= 0; j--) {
+    data.forEach((und,i) =>{
+        data[i].split("").forEach((und,j) =>{
             data[i][j] == "#" ? (InWide.push(j+1) , InHeight.push(i)) : undefined 
-        }
-    }
+        })
+    })
     let max = 0
     let min = InWide[0]
-    // InHeight[0] ? return 0
     if(InHeight[0] == undefined){
         return 0
     }
