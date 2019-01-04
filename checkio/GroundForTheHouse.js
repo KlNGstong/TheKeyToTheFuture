@@ -6,14 +6,16 @@ function house(plan) {
     let min = data[0].length
     data.forEach((str,i) =>{
         str.split("").forEach((sumb,j) =>{
-                if (max < j && sumb == "#"){
+                if(sumb == "0"){
+                    return
+                }
+                if (max < j ){
                     max = j+1
                 }
-                if(min > j && sumb == "#"){
+                if(min > j ){
                     min = j
                 }
                     InHeight.push(i)
-                    return 
         })
     })
     return ((InHeight[InHeight.length-1]+1 - InHeight[0]) * (max+1 - min));
