@@ -9,15 +9,13 @@ function house(plan) {
     let min = data[0].length
     data.forEach((str,i) =>{
         str.split("").forEach((sumb,j) =>{
-            if(sumb == "#"){
-                if (max < j){
+                if (max < j && sumb == "#"){
                     max = j+1
                 }
-                if(min > j){
+                if(min > j && sumb == "#"){
                     min = j
                 }
                 InHeight.push(i)
-            }
         })
     })
     return ((InHeight[InHeight.length-1]+1 - InHeight[0]) * (max+1 - min));
