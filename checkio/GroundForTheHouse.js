@@ -2,9 +2,6 @@ function house(plan) {
     const data = plan.split("\n")
     const InWide = []
     const InHeight = [];
-    if(data[0] == ""){
-        data.shift()  
-    }
     let max = 0
     let min = data[0].length
     data.forEach((str,i) =>{
@@ -15,7 +12,8 @@ function house(plan) {
                 if(min > j && sumb == "#"){
                     min = j
                 }
-                InHeight.push(i)
+                    InHeight.push(i)
+                    return 
         })
     })
     return ((InHeight[InHeight.length-1]+1 - InHeight[0]) * (max+1 - min));
