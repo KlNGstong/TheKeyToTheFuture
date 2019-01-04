@@ -1,17 +1,15 @@
-let nNumber = [999, 999]
 function nearestSquare(number) {
+    let nNumber = [number]
     for (let i = 1; i < number; i++) {
         const FNumber  = i*i
-            if(nNumber[0] > FNumber - number && FNumber > number){
+        if(FNumber > number){
+            if(nNumber[0] > FNumber - number){
                 nNumber = [FNumber - number , FNumber]
-<<<<<<< nearest
             }
-        } else {
+        } else { 
             if(nNumber[0] > number - FNumber){
-=======
-            } else if(nNumber[0] > number - FNumber){
->>>>>>> local
                 nNumber = [number - FNumber , FNumber]
+            }
         }
     }
     return nNumber[1];
