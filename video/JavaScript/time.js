@@ -13,3 +13,6 @@ const event = () => {
 }
 console.log("Begin")
 timer = setInterval(event,500)
+
+//Что возращает setInterval
+// Исполнение функции произойдёт спустя время, указанное в параметре delay
