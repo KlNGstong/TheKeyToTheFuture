@@ -10,5 +10,4 @@ object1.field = 6
 console.dir ({ object1, object2 })
 
 // dir / log
-//console.log печатает элемент в дереве, подобном HTML
-//console.dir печатает элемент в дереве, подобном JSON
+//log выводит только представление toString, тогда как dir выводит навигационное дерево.
