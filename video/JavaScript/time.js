@@ -12,7 +12,7 @@ const event = () => {
     counter++
 }
 console.log("Begin")
-timer = setInterval(event,500)
+timer = setInterval(event, 500)
 
-//Что возращает setInterval
-// setInterval возвращает выполнение функции не один раз, а регулярно повторяет её через указанный интервал времени.
+//что возращает setInterval
+//Метод setInterval () возвращает идентификатор, который может использоваться методом clearInterval () для остановки интервала.

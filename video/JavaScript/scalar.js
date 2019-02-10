@@ -7,4 +7,7 @@ console.dir({scalar1,scalar2})
 const object1 = { field: 5 }
 const object2 = object1
 object1.field = 6
-console.dir ({ object1,object2})
+console.dir ({ object1, object2 })
+
+// dir / log
+//log выводит только представление toString, тогда как dir выводит навигационное дерево.
