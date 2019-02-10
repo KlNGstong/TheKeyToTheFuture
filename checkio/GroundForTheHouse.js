@@ -1,7 +1,7 @@
 function house(plan) {
     const data = plan.split("\n")
-    let InWide = []
-    let InHeight = [];
+    let inWide = []
+    let inHeight = [];
     let max = 0
     let min = data[0].length
     data.forEach((str,i) =>{
