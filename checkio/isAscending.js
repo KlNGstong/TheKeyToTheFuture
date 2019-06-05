@@ -1,10 +1,14 @@
 function isAscending(items) {
-    var PNumber = items[0]
-    for (let i = 1; i < items.length; i++) {
-        if(PNumber >= items[i]){
+    let ret = items.map(function (curValue,i) {
+        if(items[0] >= items[i++]){
             return false
+        } else {
+            return true
         }
+    })
+    if(ret.splice(1,items.length).includes(false)){
+        return false;
     }
     return true;
 }
-console.log(isAscending([9, 10, 99, 123456]));
+console.log(isAscending([-5, 10, 99, 123456]));
