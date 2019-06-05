@@ -1,10 +1,7 @@
 function isAscending(items) {
-    var PNumber = items[0]
-    for (let i = 1; i < items.length; i++) {
-        if(PNumber >= items[i]){
-            return false
-        }
-    }
-    return true;
+    items.forEach(function name(curValue, i){
+        return items[0] >= items[i++]
+    });
+    return items.some(name);
 }
-console.log(isAscending([9, 10, 99, 123456]));
+console.log(isAscending([4,5,6,7,3,7,9]));
