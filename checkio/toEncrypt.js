@@ -1,19 +1,14 @@
-var alphabet = "abcdefghijklmnopqrstuvwxyz"
 function toEncrypt(text, delta) {
-    let data = alphabet.split("")
-    for (let i = 0; i < 5 ; i++) {
-        data = data.concat(data)
-    }
-    let textT = text.split("")
-    for (let i = 0; i < textT.length; i++) {
-        if(textT[i] != " "){
-            if(delta > 0){
-                textT.splice(i,1,data[data.indexOf(textT[i]) + delta])
-            } else {
-                textT.splice(i,1,data[data.lastIndexOf(textT[i]) + delta])
-            }
+    let alphabet = "abcdefghijklmnopqrstuvwxyz"
+    text = text.split('')
+    text.forEach(function (curValue,i) {
+        alphabet = alphabet.concat(alphabet)
+        if(delta > 0 && curValue != " "){
+            text.splice(i,1,alphabet[alphabet.indexOf(curValue) + delta])
+        } else if(curValue != " ") {
+            text.splice(i,1,alphabet[alphabet.lastIndexOf(curValue) + delta])
         }
-    }
-    return textT.join("")
+    }) 
+    return text.join('')
 }
-console.log(toEncrypt("d e f", -3));
+console.log(toEncrypt("important text",10));
